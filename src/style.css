@@ -1,0 +1,769 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif ;
+    font-style: normal
+    
+}
+
+:root{
+    --primary_color:#EBCC48;
+    --background_color:#242424;
+    --text_white:#ffffff;
+    --font_one: 'Playfair Display', serif;
+    --secondary_font:'Lato', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p,a{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Playfair Display', serif !important;
+    background: #242424;
+}
+
+.container{
+    max-width: 1920px;
+   padding: 0 110px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    border: 0;
+    border-top: 1px solid rgba(253, 248, 248, 0.931);
+  }
+.vl {
+    margin-right: 25%;
+    display: inline-block;
+    border: 0;
+    border-left: 3px solid #EBCC48;
+  }
+h1{
+    font-size: 36px;
+    line-height: 62px;
+    font-weight: 700;
+    color: var(--text_white);
+}
+h5{
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
+    color: var(--text_white);
+}
+h6{
+    font-family: var(--secondary_font);
+    font-size: 18px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* -------------- Common Css ----------- */
+.d_flex{
+    display: flex;
+    align-items: center;
+}
+
+/* ................................................................................................................................................
+    Header Part
+................................................................................................................................................. */
+.Header{
+    height: 155px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.348);
+    background: #000000;
+    
+}
+.Header .container{
+    background: #000;
+}
+.mobilenum{
+    background: transparent;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+.mobilenum .phone-number{
+    font-size: 25px;  
+    color: var(--primary_color);
+    margin-right: 5px;
+    background: transparent;
+}
+.mobilenum .listgroupitem {
+    border: none !important;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0px;
+    position: relative;
+    background: transparent;
+    color: #fff;
+}
+
+
+.adminbar{
+    background: #000000;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    color: var(--primary_color);
+    
+}
+
+
+.adminbar .heart,.cart,.account{
+    font-size: 25px;
+    color: var(--primary_color);
+    margin-right: 5px;
+    background: #000;
+
+}
+.adminbar .facebook,.twitter,.youtube,.instragram{
+    font-size: 25px;
+    color: var(--primary_color);
+    margin-right: 5px;
+    background: #000;
+
+}
+.adminbar .listgroupitem{
+    border: none !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-weight: 200;
+    position: relative;
+    background: #000;
+    color:#fff;
+    
+}
+
+.adminbar .listgroupitem .top-number {
+    font-size: 8px;
+    font-family:  sans-serif;
+    position: absolute;
+    top: -5px;
+    left: 32px;
+    background: #000;
+    border: 1px solid var(--primary_color);
+    color: #fff;
+    border-radius: 50%;
+    padding: 1px 5px;
+}
+
+.search-bar{
+    position: relative;
+    width: 75%;
+    margin-top: 10px;
+    
+}
+.search-bar .bordered-search{
+    border: 1px solid #ffffff !important;
+    border-radius: 7px;
+    padding: 12px 20px;
+    color:#fff;
+    background: #000;
+    font-family: 'Open Sans' !important;
+    font-size: 16px;
+    font-weight: 400;
+   
+}
+
+.search-bar .bordered-search:focus{
+    
+    box-shadow: 0px 0px 13px -6px rgba(9,48,40,1);
+}
+
+.search-bar .search-button{
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: #24242400;
+}
+.search-bar .search-button svg{
+    background: transparent;
+}
+.search-bar .search-button:hover{
+    background: #10482e;
+    
+}
+
+/* ................................................................................................................................................
+    Header Part End
+................................................................................................................................................. */
+
+
+/* ................................................................................................................................................
+    Navbar Part
+................................................................................................................................................. */
+.Nav{
+    height: 65px;
+    background: #000000;
+}
+.menubar{
+    background: #000000;
+    text-align: center;
+}
+
+.menubar ul li{
+    display: inline-block;
+    padding: 10px 25px;
+
+}
+.menubar ul{
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.menubar ul li a{
+    font-family: 'Playfair Display', serif; 
+    font-size: 18px;
+    color: var(--text_white);
+    text-decoration: none;
+    
+}
+.menubar a{
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.menubar  a::before,
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.menubar  a::before {
+  background-color: var(--primary_color);
+  height: 2px;
+  bottom: 0px;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.menubar  a::after {
+  content: "";
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: var(--primary_color);
+}
+
+.menubar a:hover::before, .active {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.menubar a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+
+.menubar ul li a:hover{
+    font-family: 'Playfair Display', serif;
+    color: var(--primary_color);
+    transition: 0.6s;
+
+    
+}
+
+/* ................................................................................................................................................
+    Navbar Part End
+................................................................................................................................................. */
+
+
+
+/* ................................................................................................................................................
+    Banner Part
+................................................................................................................................................. */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    /* text-align: left; */
+    font-size: 18px;
+    background: transparent;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-slide .image-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .swiper-slide h4{
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+  }
+  .swiper-slide h4 span{
+    font-weight: 800;
+    font-size: 48px;
+    color: var(--primary_color);
+  }
+
+  .swiper-slide h1{
+    margin: 15px 0;
+    font-weight: 400;
+    font-size: 60px;
+    color: #fff;
+  }
+
+  .swiper-slide h1 span{
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.5;
+    color: var(--primary_color);
+  }
+
+  .swiper-slide .text-box{
+    width: 60%;
+    margin-top: 90px;
+  }
+
+  .swiper-pagination-bullet{
+    background: rgba(248, 248, 248, 0.754);
+  }
+  .swiper-pagination-bullet-active{
+    background: rgb(255, 255, 255);
+  }
+  /* ................................................................................................................................................
+    Banner Part End
+................................................................................................................................................. */
+
+/* ................................................................................................................................................
+    Category Banner Part
+................................................................................................................................................. */
+.Categorybanner{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    height: 400px;
+    color: #fff;
+}
+
+    .Categorybanner .title{
+
+    }
+    .Categorybanner .title h4{
+        color: #fff;
+        margin: 30px 0;
+        font-size: 24px;
+        text-decoration: underline;
+
+    }
+    .Categorybanner .title h4 span{
+        color: var(--primary_color);
+        text-decoration: underline;
+        
+    }
+    .Categorybanner .title .image-box{
+        position: relative;
+    }
+    .Categorybanner .title  .image-box .text-cat{
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+    }
+
+    .Categorybanner .swiper-slide .image-box {
+        position: relative;
+        
+    }
+    .Categorybanner .swiper-slide img{
+        border-radius: 10px;
+    }
+    .Categorybanner .text-cat{
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+    }
+    .Categorybanner .swiper {
+        height: 80%;
+        
+
+    }
+    .Categorybanner .swiper-slide h4{
+        font-size: 24px;
+        font-weight: 800;
+    }
+    .Categorybanner .swiper-pagination-bullet{
+        display: none;
+    }
+
+/* ................................................................................................................................................
+    Category Banner Part END
+................................................................................................................................................. */
+
+
+/* ................................................................................................................................................
+    Popular Product Part
+................................................................................................................................................. */
+.Popularproduct{
+    margin-top: 20px;
+    color: #fff;
+}
+    .Popularproduct .title h4{
+        color: #fff;
+        margin: 30px 0;
+        font-size: 24px;
+        text-decoration: underline;
+
+    }
+    .Popularproduct .title h4 span{
+        color: var(--primary_color);
+        text-decoration: underline;
+        
+    }
+     .product-display{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .product-display .product-card{
+        flex:1 1;
+        flex-grow: 0;
+        flex-shrink: 1;
+        padding:10px;
+        text-align: center;
+        flex-basis: calc(21% - 20px);
+    }
+    .product-display .product-card h4{
+        font-size: 20px;
+        color: var(--primary_color);
+        font-family: var(--secondary_font)
+    }
+    .product-display .product-card p{
+        color: #ababab;
+        text-decoration: line-through;
+
+    }
+    .product-display .product-card img {
+        width: 100%;
+    } 
+
+
+
+
+
+
+
+
+    /* .Popularproduct .product-set{
+       margin-top: 20px;
+    }
+    .product-set .product-box img{
+        width: 100%;
+    }
+    .Popularproduct .product-box{
+        /* padding: 2px; 
+    }
+    .Popularproduct .product-box h5{
+        margin: 1rem auto;
+    }
+    .Popularproduct .product-box h4{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 22px;
+        color: var(--primary_color);
+        font-family: var(--secondary_font)
+    }
+    .Popularproduct .product-box p{
+        margin: 5px auto;
+        text-align: center;
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #ababab;
+        text-decoration: line-through;
+        font-family: var(--secondary_font);
+    }
+    .Popularproduct .product-box hr {
+        width: 97%;
+        margin: 0.5rem auto;
+    } */
+
+/* ................................................................................................................................................
+    Popular Product Part End
+................................................................................................................................................. */
+
+
+/* ................................................................................................................................................
+    On Sale Part
+................................................................................................................................................. */
+
+.Onsale{
+    margin-top: 20px;
+    color: #fff;
+   
+}
+    .Onsale .img-box{
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        background: #000;
+        position: relative;
+        
+    }
+    .Onsale .img-box .img-size{
+        border: 2px solid var(--primary_color);
+        border-radius: 7px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .Onsale .img-box img{
+        width: 100%;
+        transition: 0.5s;
+    }
+    .Onsale .img-box:hover img{
+        transform: scale(1.5);
+        
+    }
+
+    .Onsale .img-box .img-text{
+        width: 100%;
+        position: absolute;
+        left: 10%;
+        top: 60%;
+        text-align: left;
+        transform: translateY(-50%);
+    }
+    .Onsale .img-box .img-text2{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        font-size: 42px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .Onsale .img-box .img-text2 .percent span{
+        
+        font-size: 35px;
+    }
+
+    .Onsale .img-box .img-text3{
+        width: 100%;
+        position: absolute;
+        text-align: right;
+        font-size: 42px;
+        right:10%;
+        top: 50%;
+        transform:translateY(-50%);
+    }
+    .Onsale .img-box  h1,h4{
+        margin: 5px auto;
+        
+    }
+    .Onsale .img-box .percent span{
+        color: var(--primary_color);
+        font-size: 42px;
+    }
+    
+    .Onsale .img-box p{
+        font-family: var(--secondary_font);
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .Onsale .img-box p span{
+        color: var(--primary_color);
+        font-family: var(--secondary_font);
+    }
+
+/* ................................................................................................................................................
+    On Sale Part End
+................................................................................................................................................. */
+
+
+/* ................................................................................................................................................
+    All Product Part
+................................................................................................................................................. */
+.Allproduct{
+    margin-top: 20px;
+    color: #fff;
+}
+    .Allproduct .title h4{
+        color: #fff;
+        margin: 30px 0;
+        font-size: 24px;
+        text-decoration: underline;
+
+    }
+    .Allproduct .title h4 span{
+        color: var(--primary_color);
+        text-decoration: underline;
+        
+    }
+    /* .Allproduct .product-set{
+       margin-top: 20px;
+    }
+    .Allproduct .product-box{
+        padding: 2px;
+    }
+    .Allproduct .product-box h5{
+        margin: 1rem auto;
+    }
+    .Allproduct .product-box h4{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 22px;
+        color: var(--primary_color);
+        font-family: var(--secondary_font)
+    }
+    .Allproduct .product-box p{
+        margin: 5px auto;
+        text-align: center;
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #ababab;
+        text-decoration: line-through;
+        font-family: var(--secondary_font);
+    }
+    .Allproduct .product-box hr {
+        width: 97%;
+        margin: 0.5rem auto;
+    } */
+    .Allproduct .view-btn{
+        font-family: var(--secondary_font);
+        margin: 40px 0;
+        
+    }
+    .Allproduct .view-btn .btn{
+        color: var(--primary_color);
+        padding: 12px 35px;
+        border-color: var(--primary_color);
+        font-weight: 700;
+        font-size: 22px;
+    }
+    .Allproduct .view-btn .btn:hover{
+        background: var(--primary_color);
+        color: #000;
+    }
+/* ................................................................................................................................................
+    All Product Part End
+................................................................................................................................................. */
+
+
+/* ................................................................................................................................................
+    Delivery Section Start
+................................................................................................................................................. */
+.Delivery{
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: #fff;
+}
+    .Delivery .delivery-list{
+       
+
+    }
+    .Delivery .delivery-list:last-child{
+        border-right: 0;
+    }
+    
+    .Delivery .img-icon{
+        margin: auto 0;
+    }
+    .Delivery .text{
+        margin: auto;
+        margin-left: 30px;
+    }
+    .Delivery .text p,h5{
+        margin-top: 10px;
+    }
+    .Delivery .text p{
+        font-family: var(--secondary_font);
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+/* ................................................................................................................................................
+    Delivery Section End
+................................................................................................................................................. */
+
+/* ................................................................................................................................................
+    Footer Section Start
+................................................................................................................................................. */
+.Footer{
+    
+    background: black;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: var(--secondary_font);
+    color: white;
+}
+.Footer h5,p{
+    font-family: var(--secondary_font);
+    margin-bottom: 10px;
+    
+}
+    .Footer .footer-logo{
+        margin: 10px 0 10px 0;
+    }
+    .Footer .menubar ul li a{
+        font-family: var(--secondary_font);
+    }
+    .Footer .footer-widget{
+        padding: 40px 0;
+        border:1px solid rgba(255, 255, 255, 0.348);
+        border-left: 0;
+        border-right: 0;
+        
+    }
+    .Footer .footer-widget svg{
+        color: var(--text_white);
+    }
+    .Footer .footer-widget h4,p{
+        font-family: var(--secondary_font);
+    }
+    .Footer .footer-widget h4{
+        color: var(--primary_color);
+        font-weight: 700;
+        font-size: 26px;    
+    }
+    .Footer .footer-widget p{
+        font-weight: 400;
+        color: white;
+        font-size: 22px;
+    }
+
+    .Footer .footer-cpy{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+/* ................................................................................................................................................
+    Footer Section End
+................................................................................................................................................. */
